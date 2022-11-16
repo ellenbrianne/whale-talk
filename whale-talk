@@ -1,0 +1,30 @@
+// rules for whale talk: no consonants, only vowels excluding 'y'; 'u's & 'e's must be doubled
+
+var input = 'I love you';
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+var resultArray = [];
+
+for (let i = 0; i < input.length; i++) {
+    const runThrough = input[i];  
+    if (runThrough === 'e') {
+        resultArray.push(runThrough);
+    } else if (runThrough === 'u') {
+        resultArray.push(runThrough);
+    };
+
+    for (let j = 0; j < vowels.length; j++) {
+        const replace = vowels[j];
+
+        if (runThrough === replace) {
+            resultArray.push(replace);
+        };
+    };
+
+
+};
+
+var resultString = resultArray.join('');
+
+console.log(resultString.toUpperCase());
